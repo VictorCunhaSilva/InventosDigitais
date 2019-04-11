@@ -1,7 +1,11 @@
 class CategoriaController < ApplicationController
-    def categoria
+    def funkos
         @funkos = Produto.where("categoria = ?", "pop funkos")
-        @figures = Produto.where("categoria = ?", "action figures")
+    end
+    def pelucias
         @pelucias = Produto.where("categoria = ?", "pelucias")
+    end
+    def figures
+        @figures = Produto.where("categoria = ?", "action figures")
     end
 end

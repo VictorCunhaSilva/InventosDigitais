@@ -1,10 +1,10 @@
 
 class UserMailer < ApplicationMailer
-  default from: 'victor.silva@soulasalle.com.br'
- 
-  def welcome_email
-    @user = params[:user]
-    @url  = 'http://example.com/login'
-    mail(to: @user.email, subject: 'Welcome to My Awesome Site')
+  default from: 'vcunha365@gmail.com'
+  layout "mailer"
+  def send_email
+    @user = params[:email]
+    mail(to: @user.email, subject: 'Minion Store')
+    
   end
 end

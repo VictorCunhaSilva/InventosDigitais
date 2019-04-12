@@ -66,40 +66,17 @@
             </div>
           </div>
         </div>
-        <div class="row">
-        <% @figures.each do |produto| %>
-        <% @nome = produto.nome%>
-        <% @path = '/produtos/'+produto.id.to_s%>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="<%= produto.imagem%>" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <%= active_link_to @nome, @path %>
-                  
-                </h4>
-                <h5>Em Breve!</h5>
-                <p class="card-text"><%= produto.descricao %></p>
-             
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
-              </div>
-            </div>
-          </div>
-        <% end%>
         
-        </div>
-        <!-- /.row -->
-
-      </div>
-      <!-- /.col-lg-9 -->
-
-    </div>
-    <!-- /.row -->
-
+<p id="notice"><%= notice %></p>
+<%= form_for @reserva do |f| %>
+  <div>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
   </div>
-  <!-- /.container -->
+  <%= f.submit  class: 'btn btn-secondary' %>
+<% end %>
+<!--<% link_to 'Edit', edit_produto_path(@produto) %> -->
+<%= link_to 'Voltar' , produtos_path %>
 
   <!-- Rodapé -->
   <footer class="py-5 bg-dark">

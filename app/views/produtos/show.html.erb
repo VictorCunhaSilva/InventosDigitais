@@ -66,18 +66,44 @@
             </div>
           </div>
         </div>
-        
-<p id="notice"><%= notice %></p>
-<%= form_for @reserva do |f| %>
-  <div>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <%= f.submit  class: 'btn btn-secondary' %>
-<% end %>
-<!--<% link_to 'Edit', edit_produto_path(@produto) %> -->
-<%= link_to 'Voltar' , produtos_path %>
+        <div class="row">
 
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"><img class="card-img-top" src="<%= @produto.imagem%>" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <%= @produto.nome%>
+                  
+                </h4>
+                <h5>Em Breve!</h5>
+                <p class="card-text"><%= @produto.descricao %></p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
+              </div>
+            </div>
+          </div>
+        
+        <div class="col-lg-6 col-md-6 mb-4">
+        <p id="notice"><%= notice %></p>
+        <%= form_for @reserva do |f| %>
+          <div>
+            <p><h5>O produto <%= @produto.nome %> ainda não está disponível, informe seu email e avisaremos quando chegar!
+            </h5></p>
+            
+            <%= f.label :email %>
+            <%= f.text_field :email %>
+          </div>
+          <%= f.submit class: 'btn btn-secondary' %>
+        <% end %>
+        <!--<% link_to 'Edit', edit_produto_path(@produto) %> -->
+        <%= link_to 'Voltar' , produtos_path %>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
   <!-- Rodapé -->
   <footer class="py-5 bg-dark">
     <div class="container">

@@ -25,10 +25,9 @@ class ReservasController < ApplicationController
   # POST /reservas.json
   def create
     @reserva = Reserva.new(reserva_params)
-    
-  #respond_to do |format|
     if @reserva.save
       UserMailer.with(user: @reserva).send_email.deliver_now
+
       redirect_to :root
       
       #format.html { redirect_to @reserva, notice: 'Reserva was successfully created.' }

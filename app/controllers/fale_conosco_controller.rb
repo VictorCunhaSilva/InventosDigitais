@@ -1,2 +1,0 @@
-class FaleConoscoController < ApplicationController
-end

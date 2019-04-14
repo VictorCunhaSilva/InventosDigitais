@@ -30,6 +30,8 @@ class ReservasController < ApplicationController
     if @reserva.save
       UserMailer.with(user: @reserva).send_email.deliver_now
       redirect_to :root
+      #UserMailer.with(user: @reserva).send_email.deliver_now
+      
       
       #format.html { redirect_to @reserva, notice: 'Reserva was successfully created.' }
       #format.json { render :show, status: :created, location: @reserva }

@@ -94,7 +94,7 @@ Rails.application.configure do
  :port                 => 587,
  :user_name            => ENV['vcunha365@gmail.com'],
  :password             => ENV['Fatima10'],
- :authentication       => "auth",
+ :authentication       => "plain",
  :enable_starttls_auto => true
 }
 end

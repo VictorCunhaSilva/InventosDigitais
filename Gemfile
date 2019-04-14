@@ -24,9 +24,14 @@ gem 'jbuilder', '~> 2.5'
 gem 'twitter-bootstrap-rails'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+
 gem 'slim'
+
 gem 'active_link_to'
+
 gem 'letter_opener'
+
+gem 'letter_opener_web', '~> 1.2.0', :group => :development
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

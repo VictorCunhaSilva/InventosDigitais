@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     get "categoria/figures"
     match 'produtos' => 'produtos#index', via: 'get'
     resources 'produtos', :action => 'show'
+    
 end

@@ -84,21 +84,27 @@
               </div>
             </div>
           </div>
+
         
         <div class="col-lg-6 col-md-6 mb-4">
-        <p id="notice"><%= notice %></p>
-        <%= form_for @reserva do |f| %>
-          <div>
-            <p><h5>O produto <%= @produto.nome %> ainda não está disponível, informe seu email e avisaremos quando chegar!
-            </h5></p>
-            
-            <%= f.label :email %>
-            <%= f.text_field :email %>
+                  <div class="card h-100">
+              <p><h5>O produto <%= @produto.nome %> ainda não está disponível, informe seu email e avisaremos quando chegar!
+              </h5></p>
+              <div class="card-body">
+                <h4 class="card-title">
+                  
+                <%= form_for @reserva do |f| %>
+                <%= f.label :email %>
+                <%= f.text_field :email %>
+              </div>
+              <%= f.submit class: 'btn btn-secondary' %>
+                        <%= link_to 'Voltar' , produtos_path %>
+            <% end %>
+              </div>
+
+            </div>
           </div>
-          <%= f.submit class: 'btn btn-secondary' %>
-        <% end %>
-        <!--<% link_to 'Edit', edit_produto_path(@produto) %> -->
-        <%= link_to 'Voltar' , produtos_path %>
+
             </div>
             </div>
         </div>
